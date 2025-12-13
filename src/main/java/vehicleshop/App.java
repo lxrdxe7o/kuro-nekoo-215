@@ -42,7 +42,7 @@ public class App extends Application {
         scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
 
         // Cross-platform window settings
-        stage.setTitle("⚡ Vehicle Shop // Cyberpunk Edition");
+        stage.setTitle("⚡ Vehicle Shop Management System");
         stage.setScene(scene);
 
         // Platform-specific minimum sizes

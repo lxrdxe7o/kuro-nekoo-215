@@ -1,6 +1,6 @@
-# ⚡ Vehicle Shop // Cyberpunk Edition
+# ⚡ Vehicle Shop Management System
 
-> A modern, JavaFX-based vehicle management system featuring a stunning cyberpunk aesthetic, animated backgrounds, and seamless data persistence.
+> A modern, JavaFX-based vehicle management system featuring a stunning dark aesthetic, animated backgrounds, and seamless data persistence.
 
 ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![JavaFX](https://img.shields.io/badge/JavaFX-21-384d54?style=for-the-badge&logo=java&logoColor=white)
@@ -9,7 +9,7 @@
 
 ## ✨ Features
 
-- **Cyberpunk UI Theme**: Custom-styled dark interface with neon accents (`#00ff88`, `#00d4ff`, `#ff0080`), semi-transparent panels, and glow effects.
+- **Modern Dark UI Theme**: Custom-styled dark interface with vibrant accents (`#00ff88`, `#00d4ff`, `#ff0080`), semi-transparent panels, and glow effects.
 - **Dynamic Background**: Custom `AnimatedBackground` component featuring floating geometric shapes, particles, and grid lines.
 - **Modern Theming**: Built on top of **AtlantaFX** (Dracula theme) for cross-platform consistency and modern controls.
 - **Comprehensive CRUD**: Full Create, Read, Update, Delete operations for both **Vehicles** (Cars, Motorcycles) and **Customers**.
@@ -118,8 +118,8 @@ classDiagram
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/yourusername/vehicle-shop-cyberpunk.git
-    cd vehicle-shop-cyberpunk
+    git clone https://github.com/yourusername/vehicle-shop-modern.git
+    cd vehicle-shop-modern
     ```
 
 2.  **Run the application** (Linux/macOS)
