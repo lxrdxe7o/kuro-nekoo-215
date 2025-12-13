@@ -1,4 +1,4 @@
-![Vehicle Shop Header](/home/xero/.gemini/antigravity/brain/9c000706-9d78-4194-bc61-85d323587968/readme_header_banner_1765666394726.png)
+![Vehicle Shop Header](assets/header.png)
 
 # ⚡ Vehicle Shop Management System
 
@@ -110,7 +110,26 @@ classDiagram
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### ⚡ Quick Start (Automated Script)
+
+We provide automated scripts to streamline the setup process. These scripts will check for **Java 17+** and attempt to install it automatically if it's missing (supports Winget on Windows and apt/dnf/pacman/zypper on Linux).
+
+**🪟 Windows:**
+Double-click `setup_and_run.bat` or run via command prompt:
+
+```cmd
+setup_and_run.bat
+```
+
+**🐧 Linux:**
+Make the script executable and run it:
+
+```bash
+chmod +x setup_and_run.sh
+./setup_and_run.sh
+```
+
+### Manual Setup & Prerequisites
 
 - **JDK 17** or higher installed.
 - **Git** to clone the repository.
@@ -160,4 +179,4 @@ _(Placeholder for screenshots)_
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-![Vehicle Shop Footer](/home/xero/.gemini/antigravity/brain/9c000706-9d78-4194-bc61-85d323587968/readme_footer_banner_1765666409612.png)
+![Vehicle Shop Footer](assets/footer.png)
