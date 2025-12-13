@@ -1,3 +1,5 @@
+![Vehicle Shop Header](/home/xero/.gemini/antigravity/brain/9c000706-9d78-4194-bc61-85d323587968/readme_header_banner_1765666394726.png)
+
 # ⚡ Vehicle Shop Management System
 
 > A modern, JavaFX-based vehicle management system featuring a stunning dark aesthetic, animated backgrounds, and seamless data persistence.
@@ -157,3 +159,5 @@ _(Placeholder for screenshots)_
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+![Vehicle Shop Footer](/home/xero/.gemini/antigravity/brain/9c000706-9d78-4194-bc61-85d323587968/readme_footer_banner_1765666409612.png)
