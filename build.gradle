@@ -1,0 +1,54 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'com.vehicleshop'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // AtlantaFX 2.0.0 for JavaFX 17 compatibility
+    implementation('io.github.mkpaz:atlantafx-base:2.0.0') {
+        // Exclude transitive JavaFX to avoid version conflicts
+        exclude group: 'org.openjfx'
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+javafx {
+    version = "21.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClass = 'vehicleshop.App'
+    mainModule = 'vehicleshop'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+run {
+    workingDir = project.projectDir
+}

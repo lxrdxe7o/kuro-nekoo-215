@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="vehicleshop.controllers.MainController"
+            styleClass="main-container"
+            prefWidth="1100" prefHeight="700">
+    
+    <!-- Sidebar -->
+    <left>
+        <VBox styleClass="sidebar" prefWidth="250" spacing="0">
+            <!-- Logo Header -->
+            <VBox styleClass="sidebar-header" alignment="CENTER_LEFT">
+                <Label text="🚗 Vehicle Shop" styleClass="logo-text"/>
+                <Label text="Management System" styleClass="logo-subtitle"/>
+            </VBox>
+            
+            <!-- Navigation -->
+            <VBox spacing="0" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets top="20"/>
+                </padding>
+                
+                <Button fx:id="dashboardBtn" text="📊  Dashboard" 
+                        styleClass="nav-button" maxWidth="Infinity" 
+                        onAction="#showDashboard"/>
+                        
+                <Button fx:id="vehiclesBtn" text="🚙  Vehicles" 
+                        styleClass="nav-button" maxWidth="Infinity"
+                        onAction="#showVehicles"/>
+                        
+                <Button fx:id="customersBtn" text="👥  Customers" 
+                        styleClass="nav-button" maxWidth="Infinity"
+                        onAction="#showCustomers"/>
+                
+                <Region VBox.vgrow="ALWAYS"/>
+                
+                <Separator/>
+                
+                <Button text="⚙️  Settings" styleClass="nav-button" maxWidth="Infinity"/>
+                
+                <Button fx:id="exitBtn" text="🚪  Exit" 
+                        styleClass="nav-button" maxWidth="Infinity"
+                        onAction="#handleExit">
+                    <VBox.margin>
+                        <Insets bottom="10"/>
+                    </VBox.margin>
+                </Button>
+            </VBox>
+        </VBox>
+    </left>
+    
+    <!-- Main Content Area -->
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+    
+</BorderPane>

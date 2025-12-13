@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="vehicleshop.controllers.VehicleController"
+      spacing="20" styleClass="content-area">
+    
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <VBox HBox.hgrow="ALWAYS">
+            <Label text="Vehicles" styleClass="page-title"/>
+            <Label text="Manage your car and motorcycle inventory" styleClass="page-subtitle"/>
+        </VBox>
+        
+        <Button fx:id="addVehicleBtn" text="➕ Add Vehicle" styleClass="btn-primary"
+                onAction="#handleAddVehicle"/>
+    </HBox>
+    
+    <!-- Search and Filter -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <TextField fx:id="searchField" promptText="🔍 Search by make, model, or VIN..." 
+                   styleClass="search-field" prefWidth="350"
+                   onKeyReleased="#handleSearch"/>
+        
+        <ComboBox fx:id="typeFilter" promptText="All Types" prefWidth="150"
+                  onAction="#handleFilter"/>
+        
+        <Region HBox.hgrow="ALWAYS"/>
+        
+        <Label fx:id="resultCount" text="0 vehicles" styleClass="label-secondary"/>
+    </HBox>
+    
+    <!-- Vehicle Table -->
+    <VBox styleClass="card" VBox.vgrow="ALWAYS">
+        <TableView fx:id="vehicleTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="typeCol" text="Type" prefWidth="100"/>
+                <TableColumn fx:id="makeCol" text="Make" prefWidth="120"/>
+                <TableColumn fx:id="modelCol" text="Model" prefWidth="150"/>
+                <TableColumn fx:id="yearCol" text="Year" prefWidth="80"/>
+                <TableColumn fx:id="colorCol" text="Color" prefWidth="100"/>
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="120"/>
+                <TableColumn fx:id="vinCol" text="VIN" prefWidth="150"/>
+                <TableColumn fx:id="actionsCol" text="Actions" prefWidth="120"/>
+            </columns>
+            
+            <placeholder>
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="🚗" style="-fx-font-size: 48px; -fx-text-fill: #6c6c7c;"/>
+                    <Label text="No vehicles found" styleClass="empty-state-title"/>
+                    <Label text="Add your first vehicle to get started" styleClass="empty-state-message"/>
+                </VBox>
+            </placeholder>
+        </TableView>
+    </VBox>
+    
+</VBox>
