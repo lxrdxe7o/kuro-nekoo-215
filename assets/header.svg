@@ -1,0 +1,133 @@
+<svg width="100%" height="100%" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&amp;display=swap');
+      
+      .bg { fill: #0d1117; }
+      
+      .grid-line {
+        stroke: #1f6feb;
+        stroke-width: 1;
+        opacity: 0.2;
+      }
+      
+      .title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 60px;
+        font-weight: 800;
+        text-anchor: middle;
+        fill: #fff;
+        filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.7));
+        animation: glitch 3s infinite;
+      }
+      
+      .subtitle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 24px;
+        text-anchor: middle;
+        fill: #8b949e;
+        letter-spacing: 4px;
+        animation: fade 3s ease-in-out infinite alternate;
+      }
+      
+      .badge {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #fff;
+      }
+      
+      .badge-rect {
+        rx: 4;
+        fill: transparent;
+        stroke-width: 2;
+        fill-opacity: 0.1;
+      }
+      
+      /* Badge Colors */
+      .b1 { stroke: #00ff88; fill: #00ff88; filter: drop-shadow(0 0 5px #00ff88); animation: pulse 2s infinite; }
+      .b2 { stroke: #00d4ff; fill: #00d4ff; filter: drop-shadow(0 0 5px #00d4ff); animation: pulse 2s infinite 0.5s; }
+      .b3 { stroke: #ff0080; fill: #ff0080; filter: drop-shadow(0 0 5px #ff0080); animation: pulse 2s infinite 1s; }
+      
+      /* Animations */
+      @keyframes glitch {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.7)); transform: translate(0,0); }
+        33% { filter: drop-shadow(-2px 0 10px rgba(0, 212, 255, 0.7)); transform: translate(1px,0); }
+        66% { filter: drop-shadow(2px 0 10px rgba(255, 0, 128, 0.7)); transform: translate(-1px,0); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { stroke-opacity: 1; fill-opacity: 0.1; }
+        50% { stroke-opacity: 0.5; fill-opacity: 0.3; }
+      }
+      
+      @keyframes fade {
+        from { opacity: 0.6; }
+        to { opacity: 1; text-shadow: 0 0 10px #fff; }
+      }
+      
+      @keyframes gridMove {
+        from { transform: translateY(0); }
+        to { transform: translateY(40px); }
+      }
+      
+      .moving-grid {
+        animation: gridMove 4s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+  
+  <!-- Moving Grid Effect -->
+  <g class="moving-grid">
+    <line x1="0" y1="0" x2="800" y2="0" class="grid-line" />
+    <line x1="0" y1="40" x2="800" y2="40" class="grid-line" />
+    <line x1="0" y1="80" x2="800" y2="80" class="grid-line" />
+    <line x1="0" y1="120" x2="800" y2="120" class="grid-line" />
+    <line x1="0" y1="160" x2="800" y2="160" class="grid-line" />
+    <line x1="0" y1="200" x2="800" y2="200" class="grid-line" />
+    <line x1="0" y1="240" x2="800" y2="240" class="grid-line" />
+    <line x1="0" y1="280" x2="800" y2="280" class="grid-line" />
+    
+    <!-- Vertical Lines -->
+    <line x1="0" y1="-40" x2="0" y2="340" class="grid-line" />
+    <line x1="100" y1="-40" x2="100" y2="340" class="grid-line" />
+    <line x1="200" y1="-40" x2="200" y2="340" class="grid-line" />
+    <line x1="300" y1="-40" x2="300" y2="340" class="grid-line" />
+    <line x1="400" y1="-40" x2="400" y2="340" class="grid-line" />
+    <line x1="500" y1="-40" x2="500" y2="340" class="grid-line" />
+    <line x1="600" y1="-40" x2="600" y2="340" class="grid-line" />
+    <line x1="700" y1="-40" x2="700" y2="340" class="grid-line" />
+    <line x1="800" y1="-40" x2="800" y2="340" class="grid-line" />
+  </g>
+  
+  <!-- Vignette/Fade Overlay -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+    <stop offset="0%" stop-color="#0d1117" stop-opacity="0" />
+    <stop offset="100%" stop-color="#0d1117" stop-opacity="1" />
+  </radialGradient>
+  <rect width="100%" height="100%" fill="url(#vignette)" />
+
+  <!-- Content -->
+  <text x="50%" y="45%" class="title">NEKO'S</text>
+  <text x="50%" y="60%" class="subtitle">VEHICLE SHOP</text>
+  
+  <!-- Pseudo-buttons imitating the reference style -->
+  <g transform="translate(230, 220)">
+    <!-- Button 1: VEHICLES -->
+    <rect x="0" y="0" width="100" height="30" class="badge-rect b1" />
+    <text x="50" y="20" class="badge">VEHICLES</text>
+    
+    <!-- Button 2: CLIENTS -->
+    <rect x="120" y="0" width="100" height="30" class="badge-rect b2" />
+    <text x="170" y="20" class="badge">CLIENTS</text>
+    
+    <!-- Button 3: INVOICES -->
+    <rect x="240" y="0" width="100" height="30" class="badge-rect b3" />
+    <text x="290" y="20" class="badge">SALES</text>
+  </g>
+
+</svg>

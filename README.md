@@ -1,4 +1,4 @@
-![Vehicle Shop Header](assets/header.png)
+![Vehicle Shop Header](assets/header.svg)
 
 # ⚡ Vehicle Shop Management System
 
@@ -179,4 +179,4 @@ _(Placeholder for screenshots)_
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-![Vehicle Shop Footer](assets/footer.png)
+![Vehicle Shop Footer](assets/footer.svg)
