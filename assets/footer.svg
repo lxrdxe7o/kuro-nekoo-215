@@ -47,7 +47,7 @@
   <!-- " by xero..." ~ 240px -->
   <!-- Total ~ 350px. Start x ~ 225 -->
   
-  <g transform="translate(400, 55)" text-anchor="middle">
+  <g transform="translate(330, 55)" text-anchor="middle">
     <!-- Left part -->
     <text x="-20" y="0" class="text" text-anchor="end">made with</text>
     
